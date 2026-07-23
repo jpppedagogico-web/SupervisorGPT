@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Administração | SupervisorGPT</title>
+
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="marca">
+            <div class="marca-icone">S</div>
+
+            <div>
+                <strong>SupervisorGPT</strong>
+                <span>Administração</span>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <a href="index.html">
+                Chat jurídico
+            </a>
+
+            <a href="admin.html" class="ativo">
+                Base normativa
+            </a>
+        </nav>
+
+        <div class="versao">
+            SupervisorGPT v1.0
+        </div>
+
+    </aside>
+
+    <main class="conteudo">
+
+        <header class="cabecalho">
+
+            <div>
+                <p class="subtitulo">Centro de controle</p>
+                <h1>Administração da base normativa</h1>
+
+                <p>
+                    Acompanhe os documentos processados,
+                    artigos indexados e possíveis falhas.
+                </p>
+            </div>
+
+            <button
+                id="botaoAtualizar"
+                class="botao-atualizar"
+                type="button"
+            >
+                Atualizar dados
+            </button>
+
+        </header>
+
+        <section class="cards">
+
+            <article class="card">
+                <span class="card-titulo">Normas cadastradas</span>
+                <strong id="totalNormas">—</strong>
+                <small>Documentos processados</small>
+            </article>
+
+            <article class="card">
+                <span class="card-titulo">Artigos indexados</span>
+                <strong id="totalArtigos">—</strong>
+                <small>Trechos disponíveis para consulta</small>
+            </article>
+
+            <article class="card">
+                <span class="card-titulo">Documentos com erro</span>
+                <strong id="totalErros">—</strong>
+                <small id="textoErros">Verificando integridade</small>
+            </article>
+
+            <article class="card">
+                <span class="card-titulo">Última consulta</span>
+                <strong id="ultimaAtualizacao">—</strong>
+                <small>Dados carregados da API</small>
+            </article>
+
+        </section>
+
+        <section class="painel">
+
+            <div class="painel-cabecalho">
+
+                <div>
+                    <p class="subtitulo">Auditoria</p>
+                    <h2>Documentos da base</h2>
+                </div>
+
+                <div class="campo-pesquisa">
+                    <input
+                        id="pesquisaDocumento"
+                        type="search"
+                        placeholder="Pesquisar documento, tipo ou ano"
+                    >
+                </div>
+
+            </div>
+
+            <div id="mensagemStatus" class="mensagem-status">
+                Carregando informações da base...
+            </div>
+
+            <div class="tabela-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Documento</th>
+                            <th>Tipo</th>
+                            <th>Ano</th>
+                            <th>Artigos</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabelaDocumentos"></tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/admin.js"></script>
+
+</body>
+</html>

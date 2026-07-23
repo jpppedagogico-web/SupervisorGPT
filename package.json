@@ -1,0 +1,35 @@
+{
+  "name": "supervisorgpt",
+  "version": "1.0.0",
+  "description": "Assistente inteligente para consulta da legislação educacional da SEDUC-SP",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "update-base": "node scripts/UpdateKnowledgeBase.js",
+    "test": "echo \"Nenhum teste configurado\""
+  },
+  "keywords": [
+    "educacao",
+    "seduc",
+    "legislacao",
+    "ia",
+    "groq",
+    "supervisor"
+  ],
+  "author": "Adriano Ferreira",
+  "license": "MIT",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "axios": "^1.18.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "fs-extra": "^11.3.5",
+    "marked": "^18.0.6",
+    "pdfjs-dist": "^6.0.227"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "expressoes": [
+    {
+      "termo": "pedido de reconsideração",
+      "peso": 60,
+      "relacionados": [
+        "reconsideração",
+        "discordância do resultado",
+        "revisão do resultado"
+      ]
+    },
+    {
+      "termo": "resultado final",
+      "peso": 45,
+      "relacionados": [
+        "resultado da avaliação",
+        "resultado escolar",
+        "decisão final"
+      ]
+    },
+    {
+      "termo": "conselho de classe",
+      "peso": 45,
+      "relacionados": [
+        "conselho de classe ano série",
+        "órgão colegiado",
+        "colegiado escolar"
+      ]
+    },
+    {
+      "termo": "recurso",
+      "peso": 50,
+      "relacionados": [
+        "recorrer",
+        "interpor recurso",
+        "diretoria de ensino"
+      ]
+    },
+    {
+      "termo": "promoção",
+      "peso": 35,
+      "relacionados": [
+        "aprovação",
+        "prosseguimento de estudos"
+      ]
+    },
+    {
+      "termo": "retenção",
+      "peso": 35,
+      "relacionados": [
+        "reprovação",
+        "não promoção"
+      ]
+    },
+    {
+      "termo": "frequência",
+      "peso": 35,
+      "relacionados": [
+        "ausências",
+        "faltas",
+        "percentual de presença"
+      ]
+    },
+    {
+      "termo": "reclassificação",
+      "peso": 50,
+      "relacionados": [
+        "classificação",
+        "avanço de estudos",
+        "adequação de série"
+      ]
+    }
+  ]
+}

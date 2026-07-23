@@ -1,0 +1,133 @@
+:root {
+    --blue-main: #005CA9;
+    --blue-dark: #003B6F;
+    --blue-light: #EAF4FF;
+    --gray-bg: #F5F7FA;
+    --white: #FFFFFF;
+    --border: #D8DEE9;
+    --text: #2D3748;
+    --muted: #6B7280;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--gray-bg);
+    color: var(--text);
+}
+
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    padding: 12px 24px;
+    font-size: 13px;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    background: var(--white);
+}
+body {
+    background:
+
+linear-gradient(135deg,
+
+#F7F9FC,
+
+#EEF4FA
+
+);
+}
+
+.workspace {
+    flex: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 330px;
+    gap: 24px;
+    padding: 28px;
+}
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.empty-state {
+    color: var(--muted);
+    font-size: 14px;
+    padding: 16px;
+    background: var(--gray-bg);
+    border-radius: 12px;
+}
+
+.insight-card{
+    background:var(--white);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:22px;
+    transition:.25s;
+}
+
+.insight-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 14px 30px rgba(0,0,0,.08);
+}
+
+.insight-card h3{
+    margin-top:0;
+    color:var(--blue-dark);
+    margin-bottom:20px;
+}
+
+.metric{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 0;
+    border-bottom:1px solid #EEF2F7;
+}
+
+.metric:last-child{
+    border-bottom:none;
+}
+
+.metric span{
+    color:#6B7280;
+    font-size:14px;
+}
+
+.metric strong{
+    color:var(--blue-dark);
+    font-size:15px;
+}
+*{
+    transition:
+        background .20s ease,
+        color .20s ease,
+        transform .20s ease,
+        box-shadow .20s ease;
+}
+
+button{
+    transition:.2s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+button:active{
+    transform:scale(.96);
+}

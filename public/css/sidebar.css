@@ -1,0 +1,98 @@
+.sidebar {
+    width: 220px;
+    background: var(--blue-dark);
+    color: white;
+    padding: 24px 16px;
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    margin-bottom: 32px;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar-menu a {
+    padding: 12px 14px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.85;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+    background: rgba(255, 255, 255, 0.15);
+    opacity: 1;
+}
+.logo-mark {
+    font-size: 26px;
+}
+
+.sidebar-logo small {
+    display: block;
+    font-size: 12px;
+    opacity: 0.75;
+    margin-top: 2px;
+}
+
+.sidebar-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.12);
+    padding: 10px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+.status-dot {
+    width: 9px;
+    height: 9px;
+    background: #34D399;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.sidebar-menu a {
+    transition: 0.2s;
+}
+
+.sidebar-menu a:hover {
+    transform: translateX(3px);
+}
+
+.sidebar-footer {
+    margin-top: 32px;
+    font-size: 12px;
+    opacity: 0.7;
+    line-height: 1.5;
+}
+.sidebar{
+
+    box-shadow:
+
+        3px 0 18px rgba(0,0,0,.08);
+
+}
+
+.sidebar-menu a{
+
+    transition:.25s;
+
+}
+
+.sidebar-menu a:hover{
+
+    transform:translateX(4px);
+
+}
