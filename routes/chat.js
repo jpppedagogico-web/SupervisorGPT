@@ -2,6 +2,7 @@ const express = require("express");
 
 const SearchService = require("../app/search/SearchService");
 const AIService = require("../app/ai/AIService");
+const ContextBuilder = require("../app/context/ContextBuilder");
 
 const router = express.Router();
 
@@ -18,6 +19,10 @@ router.post("/", async (req, res) => {
         const busca = new SearchService();
         const trechos = busca.buscar(pergunta);
 
+        const builder = new ContextBuilder();
+
+        const trechosSelecionados = builder.selecionar(trechos);
+
         if (trechos.length === 0) {
             return res.json({
                 resposta:
@@ -28,16 +33,20 @@ router.post("/", async (req, res) => {
         }
 
         const ia = new AIService();
-        const resposta = await ia.responder(pergunta, trechos);
+        const resposta = await ia.responder(
+            pergunta,
+            trechosSelecionados
+        );
 
-        const fontes = trechos.map(trecho => ({
-            nomeArquivo: trecho.nomeArquivo,
-            tipo: trecho.tipo,
-            numero: trecho.numero,
-            ano: trecho.ano,
-            artigo: trecho.artigo,
-            marcador: trecho.marcador,
-            texto: trecho.texto
+        const fontes = trechosSelecionados.map(
+            trecho => ({
+                nomeArquivo: trecho.nomeArquivo,
+                tipo: trecho.tipo,
+                numero: trecho.numero,
+                ano: trecho.ano,
+                artigo: trecho.artigo,
+                marcador: trecho.marcador,
+                texto: trecho.texto
         }));
 
         res.json({

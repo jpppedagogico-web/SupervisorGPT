@@ -1,4 +1,5 @@
 const RankingService = require("../ranking/RankingService");
+const ExpandQueryService = require("../query/ExpandQueryService");
 const fs = require("fs");
 const path = require("path");
 
@@ -12,16 +13,22 @@ class SearchService {
             "indice_invertido.json"
         );
 
+        this.expandQueryService =
+        new ExpandQueryService();
+
         this.palavrasIgnoradas = new Set([
-            "a", "ao", "aos", "as", "o", "os",
-            "de", "da", "das", "do", "dos",
-            "e", "em", "no", "nos", "na", "nas",
-            "um", "uma", "uns", "umas",
-            "que", "qual", "quais", "como",
-            "por", "para", "com", "sem",
-            "ser", "sobre", "isto", "isso",
-            "eh", "é", "funciona", "funcionar",
-            "pode", "podem", "deve", "devem"
+        "a", "ao", "aos", "as", "o", "os",
+        "de", "da", "das", "do", "dos",
+        "e", "em", "no", "nos", "na", "nas",
+        "um", "uma", "uns", "umas",
+        "que", "qual", "quais", "como",
+        "por", "para", "com", "sem",
+        "ser", "sobre", "isto", "isso",
+        "eh", "é", "funciona", "funcionar",
+        "pode", "podem", "deve", "devem",
+        "tenho", "tem", "implicacao",
+        "implicacoes", "consequencia",
+        "consequencias"
         ]);
     }
 
@@ -214,16 +221,40 @@ class SearchService {
         return expressoes;
     }
 
-    buscar(consulta, limiteArtigos = 3) {
+    buscar(consulta, limiteArtigos = 12) {
         if (!consulta?.trim()) {
             return [];
         }
 
-        const termos = this.extrairTermos(consulta);
+        const termosOriginais =
+    this.extrairTermos(consulta);
 
-        if (termos.length === 0) {
-            return [];
+    if (termosOriginais.length === 0) {
+    return [];
         }
+
+        const termosExpandidos =
+    this.expandQueryService.expandir(
+        consulta,
+        termosOriginais
+    );
+
+/*
+ * O índice invertido trabalha com palavras individuais.
+ * Por isso, expressões como "resultado final" também são
+ * convertidas em "resultado" e "final".
+ */
+const termos = [
+    ...new Set(
+        termosExpandidos
+            .flatMap(termo => termo.split(" "))
+            .map(termo => this.normalizarTexto(termo))
+            .filter(termo =>
+                termo.length >= 3 &&
+                !this.palavrasIgnoradas.has(termo)
+            )
+    )
+];
 
         const indice = this.carregarIndice();
 

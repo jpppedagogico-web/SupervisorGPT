@@ -32,6 +32,20 @@ app.get("/health", (req, res) => {
  */
 const PORT = process.env.PORT || 3000;
 
+app.get("/api/config", (req, res) => {
+    const modelo = process.env.GROQ_MODEL || "openai/gpt-oss-120b";
+
+    const nomesModelos = {
+        "openai/gpt-oss-120b": "GPT-OSS 120B",
+        "openai/gpt-oss-20b": "GPT-OSS 20B",
+        "llama-3.3-70b-versatile": "Llama 3.3 70B"
+    };
+
+    res.json({
+        modelo: nomesModelos[modelo] || modelo
+    });
+});
+
 app.listen(PORT, "0.0.0.0", () => {
     console.log(
         `SupervisorGPT rodando na porta ${PORT}`

@@ -69,6 +69,54 @@
         "avanço de estudos",
         "adequação de série"
       ]
+    },
+    {
+      "termo": "retencao",
+      "peso": 80,
+      "relacionados": [
+        "reprovado",
+        "reprovacao",
+        "nao promovido",
+        "nao promocao",
+        "resultado final",
+        "promocao",
+        "progressao",
+        "reconsideracao",
+        "recurso"
+      ]
+  
+    },
+    {
+      "termo": "estudante",
+      "peso": 15,
+      "relacionados": [
+        "aluno",
+        "discente",
+        "educando"
+      ]
+  
+    },
+    {
+      "termo": "reconsideracao",
+      "peso": 70,
+      "relacionados": [
+        "pedido de reconsideracao",
+        "revisao do resultado",
+        "contestacao do resultado",
+        "resultado final"
+      ]
+    
+    },
+    {
+      "termo": "recurso",
+      "peso": 70,
+      "relacionados": [
+        "recurso contra resultado final",
+        "pedido de recurso",
+        "contestacao",
+        "reconsideracao"
+      ]
+  
     }
   ]
 }

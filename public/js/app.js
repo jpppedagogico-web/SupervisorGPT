@@ -65,3 +65,41 @@ async function carregarQuantidadeDocumentos() {
         elemento.textContent = "Base indisponível";
     }
 }
+
+async function carregarConfiguracao() {
+    try {
+        const resposta = await fetch("/api/config");
+
+        if (!resposta.ok) {
+            throw new Error(
+                "Não foi possível carregar a configuração."
+            );
+        }
+
+        const config = await resposta.json();
+
+        const elementoModelo =
+            document.getElementById("modelo-ia");
+
+        if (elementoModelo) {
+            elementoModelo.textContent =
+                config.modelo || "Não informado";
+        }
+
+    } catch (erro) {
+        console.error(
+            "Erro ao carregar configuração:",
+            erro
+        );
+
+        const elementoModelo =
+            document.getElementById("modelo-ia");
+
+        if (elementoModelo) {
+            elementoModelo.textContent =
+                "Não informado";
+        }
+    }
+}
+
+carregarConfiguracao();
