@@ -3,22 +3,12 @@
   "tipo": "Resolução",
   "numero": "34",
   "ano": "2026",
-  "quantidadeArtigos": 4,
+  "quantidadeArtigos": 2,
   "artigos": [
     {
       "numero": "1",
       "marcador": "Artigo 1º",
-      "texto": "Fica alterado o   “caput” , do"
-    },
-    {
-      "numero": "11",
-      "marcador": "artigo   11",
-      "texto": ", da Resolução SEDUC nº   162 /202 5 , que passa  a vigorar com a seguinte redação:  “"
-    },
-    {
-      "numero": "11",
-      "marcador": "Artigo 11",
-      "texto": "A unidade escolar, com o apoio da Unidade Regional de Ensino – URE, deverá  reanalisar o módulo mediante o contingente de alunos que constar matriculado no último  dia de cada semestre, readequando o módulo com vigência no primeiro dia do semestre  seguinte .”   (NR)"
+      "texto": "Fica alterado o   “caput” , do artigo   11 , da Resolução SEDUC nº   162 /202 5 , que passa  a vigorar com a seguinte redação:  “ Artigo 11   - A unidade escolar, com o apoio da Unidade Regional de Ensino – URE, deverá  reanalisar o módulo mediante o contingente de alunos que constar matriculado no último  dia de cada semestre, readequando o módulo com vigência no primeiro dia do semestre  seguinte .”   (NR)"
     },
     {
       "numero": "2",

@@ -31,13 +31,13 @@
             </div>
 
             <nav class="sidebar-menu">
-                <a class="active">🏠 Chat</a>
-                <a>📚 Biblioteca</a>
-                <a>🔎 Pesquisa</a>
-                <a>📄 Documentos</a>
-                <a>🔄 Atualizar Base</a>
-                <a>📊 Estatísticas</a>
-                <a>⚙ Configurações</a>
+                <a href="#chat" data-view="chat" class="active">🏠 Chat</a>
+                <a href="#biblioteca" data-view="biblioteca">📚 Biblioteca</a>
+                <a href="#pesquisa" data-view="pesquisa">🔎 Pesquisa</a>
+                <a href="#documentos" data-view="documentos">📄 Documentos</a>
+                <a href="#atualizar" data-view="atualizar">🔄 Atualizar Base</a>
+                <a href="#estatisticas" data-view="estatisticas">📊 Estatísticas</a>
+                <a href="#configuracoes" data-view="configuracoes">⚙ Configurações</a>
             </nav>
 
             <div class="sidebar-footer">
@@ -70,7 +70,7 @@
 
             <section class="workspace">
 
-                <section class="chat-panel">
+                <section id="chatView" class="chat-panel">    
 
                     <div id="welcomeCard" class="welcome-card centered">
                         <div class="welcome-icon">🎓</div>
@@ -87,6 +87,10 @@
                             <button id="btnPerguntar" title="Consultar">➜</button>
                         </div>
                     </div>
+
+                </section>
+
+                <section id="moduleView" class="module-view" style="display: none;">
 
                 </section>
 

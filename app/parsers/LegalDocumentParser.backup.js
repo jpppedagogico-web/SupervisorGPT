@@ -392,15 +392,8 @@ class LegalDocumentParser {
              */
 
             const ehReferenciaPosterior =
-                (
-                    /^[,;]?\s*(?:da|do|de|das|dos|desta|deste|destas|destes)\s+(?:resolucao|deliberacao|lei|decreto|portaria|parecer|indicacao|instrucao|norma|artigo)\b/i
-                        .test(depoisNormalizado)
-                )
-                ||
-                (
-                    /^[,;]?\s*(?:(?:inciso|incisos|paragrafo|§|alinea|alineas|item|itens)\b[^,;]{0,80}[,;]\s*)*(?:da|do|de|das|dos)\s+(?:resolucao|deliberacao|lei|decreto|portaria|parecer|indicacao|instrucao|norma)\b/i
-                        .test(depoisNormalizado)
-                );
+                /^[,;]?\s*(?:da|do|de|das|dos|desta|deste|destas|destes)\s+(?:resolucao|deliberacao|lei|decreto|portaria|parecer|indicacao|instrucao|norma|artigo)\b/i
+                    .test(depoisNormalizado);
 
             if (ehReferenciaPosterior) {
                 continue;

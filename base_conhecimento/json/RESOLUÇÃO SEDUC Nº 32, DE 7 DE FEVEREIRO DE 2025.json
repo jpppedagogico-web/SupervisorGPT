@@ -3,7 +3,7 @@
   "tipo": "Resolução",
   "numero": "32",
   "ano": "2025",
-  "quantidadeArtigos": 14,
+  "quantidadeArtigos": 13,
   "artigos": [
     {
       "numero": "1",
@@ -63,12 +63,7 @@
     {
       "numero": "12",
       "marcador": "Artigo 12°",
-      "texto": "Ficam revogados:  I - o inciso III do"
-    },
-    {
-      "numero": "2",
-      "marcador": "artigo 2º",
-      "texto": "da Resolução SE nº 36, de 25 de maio de 2016;  II - a Resolução nº 16 de 31 de janeiro de 2020; e  III - a Resolução nº 118, de 8 de novembro de 2021."
+      "texto": "Ficam revogados:  I - o inciso III do artigo 2º da Resolução SE nº 36, de 25 de maio de 2016;  II - a Resolução nº 16 de 31 de janeiro de 2020; e  III - a Resolução nº 118, de 8 de novembro de 2021."
     },
     {
       "numero": "13",
